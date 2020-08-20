@@ -1,0 +1,24 @@
+    @media print {
+        @page {
+            size: portrait;
+        }
+        body {
+            background-image: none;
+        }
+        .icon-bar {
+            display: none;
+        }
+        .footer {
+            background-color: #fff;
+        }
+        .footer p,
+        .footer a {
+            color: var(--primary-color);
+        }
+        .footer-item {
+            display: none;
+        }
+        .PhoneNumbers {
+            display: block;
+        }
+    }

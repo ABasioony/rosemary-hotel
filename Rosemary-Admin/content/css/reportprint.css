@@ -1,0 +1,46 @@
+@media print {
+    @page {
+        size: portrait;
+    }
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body {
+        background-image: none;
+        height: 100%;
+        position: relative;
+    }
+
+    .pt{
+        padding-top: 25px;
+    }
+    .icon-bar {
+        display: none;
+    }
+    .col-print-2{
+        flex: 0 0 16.66667%;
+        max-width: 16.66667%;
+    }
+
+    .col-print-3{
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+    .col-print-4{
+        flex: 0 0 33.33333%;
+    max-width: 33.33333%;
+    }
+    .col-print-6{
+        flex: 0 0 50%;
+        max-width: 50%
+    }
+    .footer {
+        background-color: #fff;
+        border-top: 2px solid var(--primary-color);
+    }
+    .footer p {
+        color: var(--primary-color);
+    }
+}

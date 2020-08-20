@@ -1,0 +1,576 @@
+<html lang="ar" dir="rtl">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>العروض - إكليل الجبل</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="content/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="content/img/favicon.png" rel="shortcut icon">
+    <!-- Custom styles for this template-->
+    <link href="content/vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
+    <link rel="stylesheet" href="content/css/prettydropdowns.css">
+    <link href="content/css/bootstrap-datepicker.min.css" rel="stylesheet">
+    <link href="content/css/main-styles.css" rel="stylesheet">
+
+
+</head>
+
+<body id="page-top">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+            <!-- Sidebar - Brand -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+                <div class="sidebar-brand-icon ">
+                    <img src="content/img/Ico2.png"  id="icontoggled" class="w-100 h-auto p-2" alt="لوجو إكليل الجبل">
+                    <img src="content/img/Rose.png"  id="iconuntoggled" class="w-100 h-auto" alt="لوجو إكليل الجبل">
+                </div>
+            </a>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+            <!-- Nav Item - Dashboard -->
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>لوحة التحكم</span></a>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+            <li class="nav-item">
+                <a class="nav-link" href="roomsType.html">
+                    <i class="fas fa-fw fa-bed"></i>
+                    <span>انواع الغرف</span></a>
+            </li>
+
+            <li class="nav-item ">
+              <a class="nav-link" href="rooms.html">
+                  <i class="fas fa-fw fa-bed"></i>
+                  <span>الغرف</span></a>
+          </li>
+          <li class="nav-item ">
+              <a class="nav-link" href="book.html">
+                  <i class="fas fa-fw fa-user-secret"></i>
+                  <span>الحجز</span></a>
+          </li>
+
+          <li class="nav-item ">
+              <a class="nav-link" href="offers.html">
+                  <i class="fas fa-fw fa-percentage"></i>
+                  <span>العروض</span></a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
+                aria-expanded="false" aria-controls="collapsePages">
+                <i class="fas fa-fw fa-file-invoice"></i>
+                <span>السندات</span>
+            </a>
+            <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                <div class="bg-white py-2 collapse-inner rounded">
+                    <a class="collapse-item" href="payableItems.html">بنود الصرف</a>
+                    <a class="collapse-item" href="noticePayable.html">سندات الصرف</a>
+                    <a class="collapse-item" href="noticeReceivable.html">سندات القبض</a>
+                    <a class="collapse-item" href="notificationPayable.html">تنبيهات المصروفات</a>
+                </div>
+            </div>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePagesReport"
+                aria-expanded="false" aria-controls="collapsePagesReport">
+                <i class="fas fa-fw fa-file-alt"></i>
+                <span>التقارير</span>
+            </a>
+            <div id="collapsePagesReport" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item" href="bookReport.html">تقرير الحجز</a>
+                        <a class="collapse-item" href="payableReport.html">تقرير المصروفات</a>
+                        <a class="collapse-item" href="receivableReport.html">تقرير التحصيلات</a>
+                </div>
+            </div>
+        </li>
+        <li class="nav-item ">
+            <a class="nav-link" href="messages.html">
+                <i class="fas fa-fw fa-comment-dots"></i>
+                <span>استفسارات العملاء</span></a>
+        </li>
+            <!-- Divider -->
+            <hr class="sidebar-divider d-none d-md-block">
+
+            <!-- Sidebar Toggler (Sidebar) -->
+            <div class="text-center d-none d-md-inline">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div>
+
+        </ul>
+        <!-- End of Sidebar -->
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+                    <!-- Sidebar Toggle (Topbar) -->
+                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle ml-3">
+            <i class="fa fa-bars"></i>
+          </button>
+
+                    <!-- Topbar Search -->
+                    <form class="d-none d-sm-inline-block form-inline ml-auto mr-md-3 my-2 my-md-0 mw-100 navbar-search">
+                        <div class="input-group">
+                            <input type="text" class="form-control bg-light border-0 small" placeholder="بحث..." aria-label="Search" aria-describedby="basic-addon2">
+                            <div class="input-group-append">
+                                <button class="btn btn-primary" type="button">
+                  <i class="fas fa-search fa-sm"></i>
+                </button>
+                            </div>
+                        </div>
+                    </form>
+
+                    <!-- Topbar Navbar -->
+                    <ul class="navbar-nav mr-auto">
+
+                        <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+                        <li class="nav-item dropdown no-arrow d-sm-none">
+                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-search fa-fw"></i>
+                            </a>
+                            <!-- Dropdown - Messages -->
+                            <div class="dropdown-menu dropdown-menu-left p-3 shadow animated--grow-in" aria-labelledby="searchDropdown">
+                                <form class="form-inline ml-auto w-100 navbar-search">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-primary" type="button">
+                        <i class="fas fa-search fa-sm"></i>
+                      </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </li>
+
+                      <!-- Nav Item - Alerts -->
+                      <li class="nav-item dropdown no-arrow mx-1">
+                        <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-bell fa-fw"></i>
+                            <!-- Counter - Alerts -->
+                            <span class="badge badge-danger badge-counter">3+</span>
+                        </a>
+                        <!-- Dropdown - Alerts -->
+                        <div class="dropdown-list dropdown-menu dropdown-menu-left shadow animated--grow-in" aria-labelledby="alertsDropdown">
+                            <h6 class="dropdown-header">
+                                التنبيهات
+                            </h6>
+                            <a class="dropdown-item d-flex align-items-center" href="#">
+                                <div class="ml-3">
+                                    <div class="icon-circle bg-primary">
+                                        <i class="fas fa-file-alt text-white"></i>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="small text-gray-500">12 ديسمبر 2019</div>
+                                    <span class="font-weight-bold">تقرير جديد جاهز للتحميل</span>
+                                </div>
+                            </a>
+                            <a class="dropdown-item d-flex align-items-center" href="#">
+                                <div class="ml-3">
+                                    <div class="icon-circle bg-success">
+                                        <i class="fas fa-donate text-white"></i>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="small text-gray-500">7 ديسمبر 2019</div>
+                                    تم إيداع مبلغ 300 ر.س في حسابكم
+                                </div>
+                            </a>
+                            <a class="dropdown-item d-flex align-items-center" href="#">
+                                <div class="ml-3">
+                                    <div class="icon-circle bg-warning">
+                                        <i class="fas fa-exclamation-triangle text-white"></i>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="small text-gray-500">2 ديسمبر 2019</div>
+                                    تنبيه النفقات
+                                </div>
+                            </a>
+                            <a class="dropdown-item text-center small text-gray-500" href="#">إظهر جميع التنبيهات</a>
+                        </div>
+                    </li>
+                          <!-- Nav Item - Messages -->
+                          <li class="nav-item dropdown no-arrow mx-1">
+                            <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-envelope fa-fw"></i>
+                                <!-- Counter - Messages -->
+                                <span class="badge badge-danger badge-counter">7</span>
+                            </a>
+                            <!-- Dropdown - Messages -->
+                            <div class="dropdown-list dropdown-menu dropdown-menu-left shadow animated--grow-in" aria-labelledby="messagesDropdown">
+                                <h6 class="dropdown-header">
+                                  مركز الرسائل
+                                </h6>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="dropdown-list-image ml-3">
+                                        <img class="rounded-circle" src="https://source.unsplash.com/fn_BT9fwg_E/60x60" alt="">
+                                        <div class="status-indicator bg-success"></div>
+                                    </div>
+                                    <div class="font-weight-bold">
+                                        <div class="text-truncate">رسالة رقم 1</div>
+                                        <div class="small text-gray-500">عميل رقم 1</div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="dropdown-list-image ml-3">
+                                        <img class="rounded-circle" src="https://source.unsplash.com/AU4VPcFN4LE/60x60" alt="">
+                                        <div class="status-indicator"></div>
+                                    </div>
+                                    <div>
+                                        <div class="text-truncate">رسالة رقم 2</div>
+                                        <div class="small text-gray-500">عميل رقم 2</div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="dropdown-list-image ml-3">
+                                        <img class="rounded-circle" src="https://source.unsplash.com/CS2uCrpNzJY/60x60" alt="">
+                                        <div class="status-indicator bg-warning"></div>
+                                    </div>
+                                    <div>
+                                        <div class="text-truncate">رسالة رقم 3</div>
+                                        <div class="small text-gray-500">عميل رقم 3</div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="dropdown-list-image ml-3">
+                                        <img class="rounded-circle" src="https://source.unsplash.com/Mv9hjnEUHR4/60x60" alt="">
+                                        <div class="status-indicator bg-success"></div>
+                                    </div>
+                                    <div>
+                                        <div class="text-truncate">رسالة رقم 4</div>
+                                        <div class="small text-gray-500">عميل رقم 4</div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item text-center small text-gray-500" href="#">إظهر المزيد من الرسائل</a>
+                            </div>
+                        </li>
+
+                        <div class="topbar-divider d-none d-sm-block"></div>
+
+                        <!-- Nav Item - User Information -->
+                        <li class="nav-item dropdown no-arrow">
+                          <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              <span class="ml-2 d-none d-lg-inline text-gray-600 small">مرحبًا G7</span>
+                              <img class="img-profile rounded-circle" src="content/img/user-m.png" alt="المستخدم">
+                          </a>
+                          <!-- Dropdown - User Information -->
+                          <div class="dropdown-menu dropdown-menu-left shadow animated--grow-in" aria-labelledby="userDropdown">
+                              <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                  <i class="fas fa-sign-out-alt fa-fw ml-2 text-gray-400"></i> تسجيل خروج
+                              </a>
+                          </div>
+                      </li>
+
+                  </ul>
+
+              </nav>
+              <!-- End of Topbar -->
+
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+
+                    <!-- Page Heading -->
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4 row">
+                      <h1 class="h3 mb-0 text-gray-800">العروض</h1>
+                      <a class="btn btn-success btn-icon-split" data-toggle="modal" data-target="#exampleModal">
+                        <span class="icon text-white-50"><i class="fas fa-plus"></i></span>
+                        <span class="text text-white">اضافة عرض</span></a>
+                  </div>
+                <!-- DataTales Example -->
+                <div class="card shadow mb-4">
+                  <div class="card-body">
+                    <div class="table-responsive">
+                      <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                        <thead>
+                          <tr>
+                            <th>م</th>
+                            <th>اسم العرض</th>
+                            <th>سعر العرض</th>
+                            <th>نوع الغرفة</th>
+                            <th>بداية العرض</th>
+                            <th>نهاية العرض</th>
+                            <th>تفاصيل العرض</th>
+                            <th>الصورة</th>
+                            <th class="no-sort text-center">الإجراءات</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>01</td>
+                            <td>عرض العيلة</td>
+                            <td>950</td>
+                            <td>ملكي</td>
+                            <td>2011/04/25</td>
+                            <td>2011/07/25</td>
+                            <td>لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا .</td>
+                            <td><img src="https://via.placeholder.com/100" alt="/"></td>
+                            <td class="text-center">
+                                <a style='cursor:pointer;' class='btn btn-link btn-sm EditBtn' data-toggle="modal" data-target="#editModal" title="تعديل"><i class='fa fa-edit'></i></a>
+                                <a style='cursor:pointer;' class='btn btn-link btn-sm DeleteBtn' data-toggle="modal" data-target="#msg-modal" title="حذف"><i class='fa fa-trash'></i></a>
+                            </td>
+                          </tr>
+                          <tr>
+                              <td>02</td>
+                              <td>عرض العمرة</td>
+                              <td>950</td>
+                              <td>ضيافة</td>
+                              <td>2011/04/25</td>
+                              <td>2011/07/25</td>
+                              <td>لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا .</td>
+                              <td><img src="https://via.placeholder.com/100" alt="/"></td>
+                              <td class="text-center">
+                                  <a style='cursor:pointer;' class='btn btn-link btn-sm EditBtn' data-toggle="modal" data-target="#editModal" title="تعديل"><i class='fa fa-edit'></i></a>
+                                  <a style='cursor:pointer;' class='btn btn-link btn-sm DeleteBtn' data-toggle="modal" data-target="#msg-modal" title="حذف"><i class='fa fa-trash'></i></a>
+                              </td>
+                            </tr>
+                            <tr>
+                                <td>03</td>
+                                <td>عرض شهر العسل</td>
+                                <td>950</td>
+                                <td>ملكي</td>
+                                <td>2011/04/25</td>
+                                <td>2011/07/25</td>
+                                <td>لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا .</td>
+                                <td><img src="https://via.placeholder.com/100" alt="/"></td>
+                                <td class="text-center">
+                                    <a style='cursor:pointer;' class='btn btn-link btn-sm EditBtn' data-toggle="modal" data-target="#editModal" title="تعديل"><i class='fa fa-edit'></i></a>
+                                    <a style='cursor:pointer;' class='btn btn-link btn-sm DeleteBtn' data-toggle="modal" data-target="#msg-modal" title="حذف"><i class='fa fa-trash'></i></a>
+                                </td>
+                              </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- /.container-fluid -->
+
+
+            </div>
+            <!-- End of Main Content -->
+
+          <!-- Footer -->
+          <footer class="sticky-footer bg-white-5">
+            <div class="container my-auto">
+                <div class="copyright text-center my-auto">
+                    <a href="http://www.g7-soft.com/" target="_blank"><img src="content/img/powered.png"
+                            alt="Powered By G7 Software House"></a>
+                </div>
+            </div>
+        </footer>
+        <!-- End of Footer -->
+
+        </div>
+        <!-- End of Content Wrapper -->
+
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">تأكيد الخروج</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+                </div>
+                <div class="modal-body">هل تريد الخروج بالفعل؟</div>
+                <div class="modal-footer">
+                  <button class="btn btn-secondary" type="button" data-dismiss="modal">الغاء</button>
+                  <a class="btn btn-primary" href="login.html">تسجيل خروج</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">اضافة عرض</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form class="row">
+          <div class="form-group col-12">
+            <label for="OfferName">اسم العرض</label>
+            <input type="text" class="form-control" id="OfferName" aria-describedby="OfferName" placeholder="اسم العرض">
+          </div>
+          <div class="form-group col-6">
+            <label for="OfferName">سعر العرض</label>
+            <input type="text" class="form-control" id="OfferName" aria-describedby="OfferName" placeholder="سعر العرض">
+          </div>
+          <div class="form-group col-6 select-single">
+              <label class="col-12" for="RoomType">نوع الغرفة</label>
+              <select class="form-control" class="" id="RoomType" aria-placeholder="نوع الغرفة" aria-hidden="true" tabindex="-1">
+                <option>ضيافة</option>
+                <option>ملكي</option>
+                <option>VIP</option>
+              </select>
+            </div>
+          <div class="form-group col-6">
+            <label for="OfferName">تاريخ البداية</label>
+            <input type="text" class="form-control fdatepickere" id="OfferName" aria-describedby="OfferName" placeholder="تاريخ البداية">
+          </div>
+          <div class="form-group col-6">
+            <label for="OfferName">تاريخ النهاية</label>
+            <input type="text" class="form-control fdatepickere" id="OfferName" aria-describedby="OfferName" placeholder="تاريخ النهاية">
+          </div>
+          <div class="form-group col-12">
+            <label for="OfferName">تفاصيل العرض</label>
+            <input type="text" class="form-control" id="OfferName" aria-describedby="OfferName" placeholder="تفاصيل العرض">
+          </div>
+          <div class="form-group custom-file mx-2">
+              <input type="file" class="custom-file-input" id="customFile">
+              <label class="custom-file-label" for="customFile">اختر الصورة</label>
+              <span style="font-size: 15px;;">اقصي حجم للصورة 200 كيلوبايت</span>
+            </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">اغلاق</button>
+        <button type="button" class="btn btn-primary">إضافة</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="editModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">تعديل العرض</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+          <form class="row">
+            <div class="form-group col-12">
+              <label for="OfferName">اسم العرض</label>
+              <input type="text" class="form-control" id="OfferName" aria-describedby="OfferName" placeholder="اسم العرض">
+            </div>
+            <div class="form-group col-6">
+              <label for="OfferName">سعر العرض</label>
+              <input type="text" class="form-control" id="OfferName" aria-describedby="OfferName" placeholder="سعر العرض">
+            </div>
+            <div class="form-group col-6 select-single">
+                <label class="col-12" for="RoomType">نوع الغرفة</label>
+                <select class="form-control" class="" id="RoomType" aria-placeholder="نوع الغرفة" aria-hidden="true" tabindex="-1">
+                  <option>ضيافة</option>
+                  <option>ملكي</option>
+                  <option>VIP</option>
+                </select>
+              </div>
+            <div class="form-group col-6">
+              <label for="OfferName">تاريخ البداية</label>
+              <input type="text" class="form-control fdatepickere" id="OfferName" aria-describedby="OfferName" placeholder="تاريخ البداية">
+            </div>
+            <div class="form-group col-6">
+              <label for="OfferName">تاريخ النهاية</label>
+              <input type="text" class="form-control fdatepickere" id="OfferName" aria-describedby="OfferName" placeholder="تاريخ النهاية">
+            </div>
+            <div class="form-group col-12">
+              <label for="OfferName">تفاصيل العرض</label>
+              <input type="text" class="form-control" id="OfferName" aria-describedby="OfferName" placeholder="تفاصيل العرض">
+            </div>
+            <div class="form-group custom-file mx-2">
+                <input type="file" class="custom-file-input" id="customFile">
+                <label class="custom-file-label" for="customFile">اختر الصورة</label>
+                <span style="font-size: 15px;;">اقصي حجم للصورة 200 كيلوبايت</span>
+              </div>
+          </form>
+        </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">اغلاق</button>
+        <button type="button" class="btn btn-primary">حفظ</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!------------- General Message Modal :Begin -------------->
+<div class="modal fade g7-modal-n  msg-modal deleteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" id="msg-modal">
+  <div class="modal-dialog modal-dialog-centered" id="FormMsgBody">
+      <form class="modal-content" id="test">
+          <div class="modal-body text-center no-gutters">
+              <div class="modal-icon">
+                  <span><i class="fas fa-ban"></i></span>
+              </div>
+              <p class="msg-type"></p>
+              <div class="msg">
+                  <h5> هل انت متأكد؟!</h5>
+              </div>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary " data-dismiss="modal" id="CancelBtn">إلغاء</button>
+              <button type="button" class="btn btn-primary" id="ConfirmationBtn">تأكيد</button>
+          </div>
+      </form>
+  </div>
+</div>
+<!------------- General Message Modal : End -------------->
+    <!-- Bootstrap core JavaScript-->
+    <script src="content/vendor/jquery/jquery.min.js"></script>
+    <script src="content/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="content/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="content/js/main-scripts.min.js"></script>
+
+  <!-- Page level plugins -->
+  <script src="content/vendor/datatables/jquery.dataTables.min.js"></script>
+  <script src="content/vendor/datatables/dataTables.bootstrap4.min.js"></script>
+
+  <!-- Page level custom scripts -->
+  <script src="content/js/demo/datatables-demo.js"></script>
+
+  <script src="content/js/jquery.prettydropdowns.js"></script>
+  <script src="content/js/bootstrap-datepicker.min.js"></script>
+  <script>
+    $(".fdatepickere").datepicker({
+        format: "yyyy/mm/dd"
+    });
+  </script>
+
+</body>
+
+</html>
